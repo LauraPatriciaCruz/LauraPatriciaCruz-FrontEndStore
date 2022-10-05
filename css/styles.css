@@ -1,9 +1,7 @@
 :root { 
     --primario: #fcdcc7;
-    --primarioOscuro: #f6c8c7;
-    --secundario: #1a3763;
+    --azul: #002F65;
     --botonPrimario: rgb(255,203,112);
-    --botonSecundario: rgb(255, 199, 153);
     --blanco: #FFF;
     --negro: #000;
 
@@ -29,7 +27,7 @@ body {
 p {
     font-size: 1.8rem;
     font-family: var(--fuentePrincipal);
-    color: var(--secundario);
+    color: var(--azul);
     margin-left: 2rem;
     margin-right: 2rem;
 }
@@ -40,7 +38,6 @@ a {
 
 img {
     width: 100%;
-    border-radius: 1rem;
 }
 
 .container {
@@ -51,13 +48,23 @@ img {
 
 h1, h2, h3 {
     text-align: center;
-    color: var(--secundario);
+    color: var(--azul);
     font-family: var(--fuentePrincipal);
+}
+
+.container > h1 {
+    color:transparent;
+    background-color: #002F65;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.354);
+    -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
 }
 
 h1 {
     font-size: 4rem;
     text-transform: uppercase;
+
 }
 
 h2 {
@@ -71,17 +78,26 @@ h3 {
 .header {
     display: flex;
     justify-content: center;
+    background-image: url(../img/disneyBack2.webp);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center center;
+    height:48rem;
+    transition: 0.5s ease-in-out;
+    object-fit: cover;
+} 
+.header:hover {
+    transform: scale(1.04);
 }
-
 .header__logo {
-    height: 20rem;
-    width: 35rem;
+    height: 15rem;
+    width: 28rem;
     margin:3rem 0;
 }
 
 /* footer */
 .footer {
-    background-color: var(--primarioOscuro);
+    background-color: var(--azul);
     padding: 1rem 0;
     margin-top: 15rem;
 }
@@ -91,17 +107,17 @@ h3 {
     text-align: center;
     font-size: 2.2rem;
     letter-spacing: .3rem;
-    color:var(--secundario)
+    color:var(--blanco)
     
 
 }
 .nav {
     width: 100%;
-    background-color:  var(--primarioOscuro);
+    background-color: var(--azul);
     padding:1rem 0;
     display:flex;
     justify-content: center;
-    gap: 10rem; /*forma nueva de separar*/
+    gap: 15rem; /*forma nueva de separar*/
 }
 
 .nav__link {
@@ -113,7 +129,7 @@ h3 {
 
 .nav__link--active, 
 .nav__link:hover{
-    color:var(--secundario);
+    color:var(--azul);
     transition: 300ms;
 }
 
@@ -141,16 +157,17 @@ h3 {
 }
 
 .product {
-    background-color: var(--primarioOscuro);
-    padding: 1rem;
     margin: 1rem;
-    border-radius: 1rem;
 }
 
-.product:hover {
+.product__img{
+    border-radius:50%;
+}
+
+.product__img:hover {
     transform: scale(1.1);
-    transition: 300ms;
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+    transition: 0.5s ease-in-out;
+    border-radius: 1%;
 }
 
 .product__name {
@@ -159,13 +176,13 @@ h3 {
 
 .product__price {
     font-size: 2.8rem;
-    color: var(--secundario);
+    color: var(--azul);
 }
 
 .product__name,
 .product__price {
     font-family: var(--fuentePrincipal);
-    margin: 1rem 0;
+    margin: 3rem 0;
     text-align: center;
     line-height: 1,5rem;  
 }
@@ -183,14 +200,14 @@ grid-column: 1 / 3;
     grid-row: 2/3;
     background-image: url(../img/graphic11.gif);
     border-radius: 1rem;
-    /* width:95%; */
+    width:100%;
 }
 
 .graphic--girls {
     background-image: url(../img/graphic22.jpg);
     grid-row: 8/9;
     border-radius: 1rem;
-    /* width:95%; */
+    width:100%;
 }
 
 @media (min-width: 768px){
@@ -239,8 +256,14 @@ grid-column: 1 / 3;
     grid-row: 1 / 2;
     margin-left: 2rem;
     width: 90%;
+    border-radius: 50%;
 }
 
+.aboutUs__img:hover {
+    transform: scale(1.1);
+    transition: 0.7s ease-in-out;
+    border-radius: 1%;
+}
 @media (min-width:768px){
     .aboutUs__img{
         grid-column: 2 / 3;
@@ -304,15 +327,19 @@ grid-column: 1 / 3;
 }
 
 .form__field {
-    border: 1rem solid var(--primarioOscuro);
+    border: .1rem solid var(--azul);
     border-radius: 1rem;
     background-color: transparent;
-    color: var(--secundario);
+    color: var(--azul);
     font-size: 2rem;
     font-family: var(--fuentePrincipal);
     /* grid-template-columns: 1/2; */
     padding: 1rem;
     /* appearance: none; */
+}
+.form__field:hover{
+    background-color: var(--azul);
+    color:var(--blanco);
 }
 
 .form__submit {
@@ -328,5 +355,6 @@ grid-column: 1 / 3;
 
 .form__submit:hover{
     cursor: pointer;
-    background-color: var(--botonSecundario);
+    background-color: var(--azul);
+    color:var(--blanco);
 }
