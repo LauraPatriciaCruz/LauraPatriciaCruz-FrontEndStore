@@ -28,8 +28,8 @@ p {
     font-size: 1.8rem;
     font-family: var(--fuentePrincipal);
     color: var(--azul);
-    margin-left: 2rem;
-    margin-right: 2rem;
+    /* margin-left: 2rem;
+    margin-right: 2rem; */
 }
 
 a {
@@ -37,11 +37,11 @@ a {
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .container {
-    max-width: 155rem;  /* 1200px */
+    max-width: 120rem;  /* 1200px */
     margin: 0 auto;   /* para centrarlo */
     width: 95%;
 }
@@ -64,6 +64,8 @@ h1, h2, h3 {
 h1 {
     font-size: 4rem;
     text-transform: uppercase;
+    margin-top: 10rem;
+    margin-bottom: 7rem;
 
 }
 
@@ -82,7 +84,7 @@ h3 {
     background-size:cover;
     background-repeat:no-repeat;
     background-position: center center;
-    height:48rem;
+    height:37rem;
     transition: 0.5s ease-in-out;
     object-fit: cover;
 } 
@@ -112,7 +114,7 @@ h3 {
 
 }
 .nav {
-    width: 100%;
+    /* width: 100%; */
     background-color: var(--azul);
     padding:1rem 0;
     display:flex;
@@ -146,22 +148,26 @@ h3 {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    margin:1.5rem;
-    line-height: 1.03;
+    /* margin:1.5rem; */
+    /* line-height: 1.03; */
 }
 
-@media (min-width: 1490px){
+@media (min-width: 768px){
     .grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
+/* Productos */
+
 .product {
     margin: 1rem;
+    padding:1rem;
 }
 
 .product__img{
     border-radius:50%;
+ 
 }
 
 .product__img:hover {
@@ -175,8 +181,9 @@ h3 {
 }
 
 .product__price {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     color: var(--azul);
+    
 }
 
 .product__name,
@@ -184,54 +191,51 @@ h3 {
     font-family: var(--fuentePrincipal);
     margin: 3rem 0;
     text-align: center;
-    line-height: 1,5rem;  
+    line-height: 2rem;  
 }
 
 /* Gráficos */
 
 .graphic {
-min-height: 30rem; /*300px*/
-background-repeat: no-repeat;
-background-size: cover;
-grid-column: 1 / 3;
+    min-height: 30rem; /*300px*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+    background-size: 130%;
+    animation: movement 10s infinite linear alternate;
 }
 
-.graphic--girl {
+@keyframes movement {
+    from{
+        background-position: botton left;
+    }to{
+        background-position: top right;
+    }
+}
+
+
+.graphic--boyWithToys {
     grid-row: 2/3;
-    background-image: url(../img/graphic11.gif);
+    background-image: url(../img/boyy.jpg);
     border-radius: 1rem;
-    width:100%;
+    background-position: center center;
 }
 
-.graphic--girls {
-    background-image: url(../img/graphic22.jpg);
+.graphic--girlAndBoy {
+    background-image: url(../img/boyWithToys.jpg);
     grid-row: 8/9;
     border-radius: 1rem;
-    width:100%;
+    width:auto;
+    background-position: center center;
 }
 
 @media (min-width: 768px){
-        .graphic--girls{
-        grid-row: 5 / 6;
-        grid-column: 1 / 3;
-        }
+    .graphic--girlAndBoy {
+        grid-row: 5/6;
+        grid-column: 3/5;
+    }
 }
 
-@media (min-width: 768px){
-        .graphic--girl{
-        grid-row: 2/ 3;
-        grid-column: 1 / 3;
-        }
-}
-
-@media (min-width: 768px){
-        .graphic--girls, .graphic--girl {
-            width: 988px;
-            height: 565px;
-            margin-left: 1rem;
-            margin-top: 1rem;
-        }
-}
 
 /* About Us */
 .aboutUs {
@@ -280,8 +284,11 @@ grid-column: 1 / 3;
 
 .blocks {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+     gap: 2rem;
+}
+
+.block {
+    text-align: center;
 }
 
 .buy__title {
@@ -293,13 +300,14 @@ grid-column: 1 / 3;
     .blocks {
         grid-template-columns: repeat(3, 1fr);
 }
-.block {
+/* .block {
     text-align: center;
-}
+} */
 
 .iconClass{
     width: 14rem;
     height: 12rem;
+
 }
 .block__title {
     /* margin:0; */
@@ -310,9 +318,13 @@ grid-column: 1 / 3;
 }
 
 /* Página del Producto */
-
+ .nemo{
+    margin-top: 9rem;
+    margin-left: 6rem;
+    margin-right:6rem;
+ }
 @media (min-width: 768px){
-    .setMickey {
+    .nemo {
         display: grid;
         grid-template-columns: repeat(2,1fr);
         column-gap: 2rem;
