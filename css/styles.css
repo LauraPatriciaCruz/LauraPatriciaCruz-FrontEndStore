@@ -2,7 +2,7 @@
     /* --primario: #fcdcc7; */
     --primario: #a4c3b2;
     /* --azul: #002F65; */
-    --azul: #4a5759;
+    --verde: #4a5759;
     --botonPrimario: rgb(255,203,112);
     --blanco: #FFF;
     --negro: #000;
@@ -29,7 +29,7 @@ body {
 p {
     font-size: 1.8rem;
     font-family: var(--fuentePrincipal);
-    color: var(--azul);
+    color: var(--verde);
     /* margin-left: 2rem;
     margin-right: 2rem; */
 }
@@ -50,7 +50,7 @@ img {
 
 h1, h2, h3 {
     text-align: center;
-    color: var(--azul);
+    color: var(--verde);
     font-family: var(--fuentePrincipal);
 }
 
@@ -101,7 +101,7 @@ h3 {
 
 /* footer */
 .footer {
-    background-color: var(--azul);
+    background-color: var(--verde);
     padding: 1rem 0;
     margin-top: 15rem;
 }
@@ -117,7 +117,7 @@ h3 {
 }
 .nav {
     /* width: 100%; */
-    background-color: var(--azul);
+    background-color: var(--verde);
     padding:1rem 0;
     display:flex;
     justify-content: center;
@@ -133,7 +133,7 @@ h3 {
 
 .nav__link--active, 
 .nav__link:hover{
-    color:var(--azul);
+    color:var(--verde);
     transition: 300ms;
 }
 
@@ -184,7 +184,7 @@ h3 {
 
 .product__price {
     font-size: 2.5rem;
-    color: var(--azul);
+    color: var(--verde);
     
 }
 
@@ -344,10 +344,10 @@ h3 {
 }
 
 .form__field {
-    border: .1rem solid var(--azul);
+    border: .1rem solid var(--verde);
     border-radius: 1rem;
     background-color: transparent;
-    color: var(--azul);
+    color: var(--verde);
     font-size: 2rem;
     font-family: var(--fuentePrincipal);
     /* grid-template-columns: 1/2; */
@@ -355,7 +355,7 @@ h3 {
     /* appearance: none; */
 }
 .form__field:hover{
-    background-color: var(--azul);
+    background-color: var(--verde);
     color:var(--blanco);
 }
 
@@ -372,6 +372,6 @@ h3 {
 
 .form__submit:hover{
     cursor: pointer;
-    background-color: var(--azul);
+    background-color: var(--verde);
     color:var(--blanco);
 }
