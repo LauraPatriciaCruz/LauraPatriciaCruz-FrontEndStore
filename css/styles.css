@@ -1,11 +1,12 @@
 :root { 
     /* --primario: #fcdcc7; */
-    --primario: #a4c3b2;
+    --primario: #7BC1EB;
     /* --azul: #002F65; */
-    --verde: #4a5759;
-    --botonPrimario: rgb(255,203,112);
+    /* --verde: #4a5759; */
     --blanco: #FFF;
     --negro: #000;
+    --azul: #002F64;
+    --verde: #1ABC9C;
 
     --fuentePrincipal: "poppins";
 }
@@ -21,7 +22,7 @@ html {
 
 /* Globales */
 body {
-    background-color: var(--primario);
+    background: linear-gradient(135deg, #a9e4f7 0%,#0fb4e7 100%);
     font-size: 1.6rem;
     line-height: 1.5;  /* es la base de la fuente */
 }
@@ -50,22 +51,12 @@ img {
 
 h1, h2, h3 {
     text-align: center;
-    color: var(--verde);
+    color: var(--azul);
     font-family: var(--fuentePrincipal);
-}
-
-.container > h1 {
-    color:transparent;
-    background-color: #4a5759;
-    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.354);
-    -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
 }
 
 h1 {
     font-size: 4rem;
-    text-transform: uppercase;
     margin-top: 10rem;
     margin-bottom: 7rem;
 
@@ -128,17 +119,16 @@ h3 {
     font-family: var(--fuentePrincipal);
     text-transform: uppercase;
     color: var(--blanco);
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .nav__link--active, 
 .nav__link:hover{
-    color:var(--verde);
     transition: 300ms;
 }
 
 .nav__link--active{
-    color:var(--blanco)
+    color:var(--azul)
 }
 
 .nav__link:hover {
@@ -168,23 +158,22 @@ h3 {
 }
 
 .product__img{
-    border-radius:50%;
- 
+    border-radius:1%;
+    transition: 0.5s ease-in-out;
 }
 
 .product__img:hover {
     transform: scale(1.1);
-    transition: 0.5s ease-in-out;
-    border-radius: 1%;
 }
 
 .product__name {
     font-size: 2rem;
+    color: var(--azul);
 }
 
 .product__price {
     font-size: 2.5rem;
-    color: var(--verde);
+    color: var(--azul);
     
 }
 
@@ -251,6 +240,7 @@ h3 {
 .pGrid {
     text-align: center;
     margin-top: 0;
+    color: var(--azul);
 }
 
 @media (min-width:768px){
@@ -265,12 +255,12 @@ h3 {
     grid-row: 1 / 2;
     margin-left: 2rem;
     width: 90%;
-    border-radius: 50%;
+    border-radius: 1%;
+    transition: 0.5s ease-in-out;
 }
 
 .aboutUs__img:hover {
-    transform: scale(1.1);
-    transition: 0.7s ease-in-out;
+    transform:scale(1.1);
     border-radius: 1%;
 }
 @media (min-width:768px){
@@ -323,6 +313,10 @@ h3 {
 }
 
 /* Página del Producto */
+p{
+    color: var(--azul);
+}
+
  .nemo{
     margin-top: 9rem;
     margin-left: 6rem;
